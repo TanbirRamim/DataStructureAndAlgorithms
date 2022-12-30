@@ -1,33 +1,31 @@
-// linear search //
+// linear search
 #include <stdio.h>
-int linear_search(int arr[], int n, int x)
+#include <conio.h>
+#include <stdlib.h>
+void main()
 {
-    for (int i = 0; i < n; i++)
+    int a[10], i, n, flag = 0;
+    //  clrscr();
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    printf("Enter the elements of the array: ");
+    for (i = 0; i < n; i++)
     {
-        if (arr[i] == x)
+        scanf("%d", &a[i]);
+    }
+    printf("Enter the element to be searched: ");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        if (a[i] == n)
         {
-            return i;
+            flag = 1;
+            break;
         }
     }
-    return -1;
-}
-int main()
-{
-    int n, x, arr[n];
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-    scanf("%d", &x);
-    int result = linear_search(arr[n], n, x);
-    if (result == -1)
-    {
-        printf("Element is not present in array");
-    }
+    if (flag == 1)
+        printf("Element found at position %d", i + 1);
     else
-    {
-        printf("Element is present at index %d", result);
-    }
-    return 0;
+        printf("Element not found");
+    getch();
 }
