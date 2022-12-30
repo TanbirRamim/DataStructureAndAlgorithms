@@ -20,7 +20,7 @@ int main()
         scanf("%d", &arr[i]);
     }
     scanf("%d", &x);
-    int result = linear_search(arr, n, x);
+    int result = linear_search(arr[n], n, x);
     if (result == -1)
     {
         printf("Element is not present in array");
