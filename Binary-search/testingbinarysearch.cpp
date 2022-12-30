@@ -1,4 +1,7 @@
 // binary search algorithm
+// Time complexity: O(logn)
+// Space complexity: O(1)
+
 #include <bits/stdc++.h>
 using namespace std;
 int binarysearch(int arr[], int n, int key)
