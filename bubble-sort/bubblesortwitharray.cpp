@@ -1,4 +1,4 @@
-// bubble sort algorithm
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
