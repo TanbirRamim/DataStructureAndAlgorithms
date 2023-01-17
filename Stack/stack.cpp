@@ -23,6 +23,7 @@ public:
     int pop();
     int peek();
     bool isEmpty();
+    bool isFull();
 };
 bool Stack::push(int x)
 {
@@ -68,6 +69,10 @@ bool Stack::isEmpty()
 {
     return (top < 0);
 }
+bool Stack::isFull()
+{
+    return (top >= MAX - 1);
+}
 int main()
 {
     class Stack s;
@@ -77,5 +82,6 @@ int main()
     cout << s.pop() << " Popped from stack" << endl;
     cout << "Top element is " << s.peek() << endl;
     cout << "Stack is empty " << s.isEmpty() << endl;
+    cout << "Stack is full " << s.isFull() << endl;
     return 0;
 }
